@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "boilerplate"                # EDIT: package/distribution name
+version = "0.1.0"                 # EDIT: bump when releasing
+description = "Boiler Plate – short description"   # EDIT
+authors = [{ name = "Your Name" }]              # EDIT
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [                   # EDIT: add/remove dependencies
+    "fastapi",
+    "uvicorn[standard]"
+]
+
+[project.scripts]
+boilerplate = "boilerplate.cli:main"   # EDIT: CLI name and entry point
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["boilerplate"]            # EDIT: match your package folder
+
+[tool.setuptools.package-data]
+boilerplate = ["static/*", "static/**/*"]   # EDIT: add templates/* etc. if needed
