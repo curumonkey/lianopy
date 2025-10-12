@@ -39,7 +39,7 @@ htmlcov/
 Thumbs.db
 
 # Local storage or runtime data
-storage_root/
+# storage_root/
 .venv/
-__pycache__/
-*.pyc
+# __pycache__/
+# *.pyc

@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Liana File Share</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+<header>
+  <div id="topbar">
+    <!-- Row 1 -->
+    <button class="nav-button" id="backBtn" title="Back">⬅</button>
+
+    <!-- Title acts as toggle -->
+    <div class="title" id="titleToggle">Lianopy ▾</div>
+
+    <button class="nav-button" id="forwardBtn" title="Forward">➡</button>
+
+    <!-- Row 2: breadcrumb -->
+    <div id="breadcrumb"></div>
+
+    <!-- Row 3: hidden controls (spans all 3 columns) -->
+    <div id="commands" class="hidden">
+      <div class="controls-bar">
+        <select id="filterDropdown">
+          <option value="all">All</option>
+          <option value="images">Images</option>
+          <option value="videos">Videos</option>
+          <option value="docs">Documents</option>
+        </select>
+
+        <input type="text" id="searchBox" placeholder="Search..." />
+
+        <select id="sortDropdown">
+          <option value="name">Sort: Name</option>
+          <option value="date">Sort: Date</option>
+          <option value="size">Sort: Size</option>
+        </select>
+
+        <select id="groupDropdown">
+          <option value="none">Group: None</option>
+          <option value="type">Group: Type</option>
+          <option value="date">Group: Date</option>
+        </select>
+
+        <div class="view-toggle">
+          <button id="tileViewBtn" title="Tile View">🔲</button>
+          <button id="listViewBtn" title="List View">📃</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+
+  <main>
+    <!-- Controls -->
+    <section id="controls">
+      <button id="prev">◀ Prev</button>
+      <span id="pageInfo"></span>
+      <button id="next">Next ▶</button>
+      <button id="downloadSelected">⬇ Download Selected</button>
+      <select id="filter">
+        <option value="all">All</option>
+        <option value="images">Images</option>
+        <option value="videos">Videos</option>
+        <option value="docs">Documents</option>
+      </select>
+    </section>
+
+    <!-- File grid -->
+    <section id="grid"></section>
+  </main>
+
+  <footer>
+    <small>Powered by FastAPI + Lianopy</small>
+  </footer>
+
+  <script src="/static/app.js"></script>
+
+  <!-- Loading overlay -->
+  <div id="loadingOverlay" class="hidden">
+    <div class="spinner"></div>
+    <p>Loading...</p>
+  </div>
+</body>
+</html>

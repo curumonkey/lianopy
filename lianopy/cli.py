@@ -27,7 +27,7 @@ def main():
     parser.add_argument("--port", type=int, default=8000, help="Port to run on")
     args = parser.parse_args()
 
-    os.environ["BOILERPLATE_STORAGE"] = args.directory   # EDIT: env var prefix
+    os.environ["LIANOPY_STORAGE"] = args.directory   # EDIT: env var prefix
 
     ip = get_local_ip()
     url = f"http://{ip}:{args.port}"
@@ -41,7 +41,7 @@ def main():
     qr.print_ascii(invert=True)  # prints a scannable QR code in terminal
 
     # Run the FastAPI app
-    uvicorn.run("boilerplate.app:app", host="0.0.0.0", port=args.port, reload=False)  # EDIT: package path
+    uvicorn.run("lianopy.app:app", host="0.0.0.0", port=args.port, reload=False)  # EDIT: package path
 
 
 if __name__ == "__main__":
