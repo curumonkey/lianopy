@@ -2,7 +2,17 @@
 
 ### 🙈🍌 “Ooo‑oooh, welcome to my jungle! 
 
-I’m just a curious monkey, and I’ve found this clever thing called Lianopy. You know how we monkeys swing from liana to liana high up in the canopy? Well, that’s the idea here!
+I’m just a curious monkey with a camera in hand. I love snapping photos of everything I see — but when it’s time to share them, the trouble begins:
+
+- Everyone wants their own copy of the pictures.
+
+- Online storage is too expensive for my big, juicy files.
+
+- I don’t want to keep making new Gmail accounts just to pass things around. Are you guilty?
+
+- And honestly… isn’t it amazing to share without being chained to the internet all the time?
+
+That’s why I went swinging through the vines and found this clever thing called Lianopy. You know how we monkeys leap from liana to liana high up in the canopy? Well, that’s the idea here!
 
 Instead of bananas, we’re sharing files — swinging them safely from one canopy to another through digital vines.
 
@@ -13,6 +23,8 @@ Instead of bananas, we’re sharing files — swinging them safely from one cano
 + 🌐 CLI + Web interface → easy to start from the ground or the treetops.
 
 + 📱 QR code onboarding → just point, scan, and swing right in.
+
++ 🌴 Local network file sharing → pass files from canopy to canopy without needing the cloud. 
 
 + ⚡ Responsive UI & secure storage → smooth like a monkey’s swing, safe like a sturdy branch.
 
