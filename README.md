@@ -43,7 +43,8 @@ pip install -r requirements.txt
 pip install -e .
 ```
 
-Navigate to the folder you want to share Use the cd (change directory) command to move into the directory you’d like to make available on your local network. 
+Navigate to the folder you want to share.
+Use the cd (change directory) command to move into the directory you’d like to make available on your local network. 
 
 For example, on Windows:
 ```bash
@@ -56,5 +57,4 @@ On Linux/macOS, you might use:
 cd /home/yourname/Downloads
 ```
 
-
-scan the qrcode or proceed to the url project
+Scan the qrcode or proceed to the url project
