@@ -1,6 +1,8 @@
 # 🌿 Lianopy
 
-🙈🍌 “Ooo‑oooh, welcome to my jungle! I’m just a curious monkey, and I’ve found this clever thing called Lianopy. You know how we monkeys swing from liana to liana high up in the canopy? Well, that’s the idea here!
+## 🙈🍌 “Ooo‑oooh, welcome to my jungle! 
+
+I’m just a curious monkey, and I’ve found this clever thing called Lianopy. You know how we monkeys swing from liana to liana high up in the canopy? Well, that’s the idea here!
 
 Instead of bananas, we’re sharing files — swinging them safely from one canopy to another through digital vines.
 
