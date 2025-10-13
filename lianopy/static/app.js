@@ -22,9 +22,9 @@ titleToggle.onclick = () => {
   commands.classList.toggle("hidden");
   // Optional: change arrow indicator
   if (commands.classList.contains("hidden")) {
-    titleToggle.textContent = "Liana ▾";
+    titleToggle.textContent = "Lianopy ▾";
   } else {
-    titleToggle.textContent = "Liana ▴";
+    titleToggle.textContent = "Lianopy ▴";
   }
 };
 

@@ -13,6 +13,8 @@ from fastapi.staticfiles import StaticFiles
 import mimetypes
 from PIL import Image
 
+from fastapi.responses import FileResponse
+
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 # --- Config ---
@@ -62,12 +64,22 @@ def ensure_thumbnail(file_path: Path) -> Optional[Path]:
     except Exception:
         return None
 
+# Path to your static folder
+STATIC_DIR = Path(__file__).parent / "static"
 
+# Mount the static directory so assets are served at /static/*
+app.mount("/static", StaticFiles(directory=STATIC_DIR), name="static")
 
 # --- API ---
-@app.get("/")
-def root():
-    return {"status": "ok", "root": str(STORAGE_ROOT)}
+# @app.get("/")
+# def root():
+    # return {"status": "ok", "root": str(STORAGE_ROOT)}
+
+# Redirect root (/) to /static/index.html
+# Serve index.html directly at /
+@app.get("/", include_in_schema=False)
+async def root():
+    return FileResponse(STATIC_DIR / "index.html")
 
 @app.get("/api/list")
 def list_files(
