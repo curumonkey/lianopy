@@ -25,7 +25,7 @@ So when you run Lianopy, you’re not just starting a server — you’re openin
 Clone our Lianopy repository
 
 ```bash
-git clone https://github.com/<your-username>/lianopy.git <project name>
+git clone https://github.com/mrsolomonkey/lianopy.git <project name>
 ```
 
 go to your project
