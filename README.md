@@ -1,16 +1,20 @@
 # 🌿 Lianopy
 
-A jungle‑themed, stateless, cross‑platform Python file‑sharing server.  
-This project provides a **CLI + web interface** for sharing files across your local network with QR code onboarding, responsive UI, and secure storage handling.
+🙈🍌 “Ooo‑oooh, welcome to my jungle! I’m just a curious monkey, and I’ve found this clever thing called Lianopy. You know how we monkeys swing from liana to liana high up in the canopy? Well, that’s the idea here!
+
+Instead of bananas, we’re sharing files — swinging them safely from one canopy to another through digital vines.
 
 ---
 
-## 📦 Features
-- 🌐 Share any folder or drive path over your LAN  
-- 📱 Scan a QR code for instant mobile access  
-- ⚡ FastAPI backend with Uvicorn server  
-- 🖥️ CLI for quick setup and control
-- 🪶 Lightweight, cross‑platform, and easy to extend  
++ 🐒 Stateless & cross‑platform → works anywhere, no heavy baggage.
+
++ 🌐 CLI + Web interface → easy to start from the ground or the treetops.
+
++ 📱 QR code onboarding → just point, scan, and swing right in.
+
++ ⚡ Responsive UI & secure storage → smooth like a monkey’s swing, safe like a sturdy branch.
+
+So when you run Lianopy, you’re not just starting a server — you’re opening a jungle bridge, letting others climb across and grab what they need. From canopy to canopy, vine to vine, the jungle stays connected.” 🌴
 
 ---
 
