@@ -6,15 +6,17 @@ cd to your project
 
 then run this
 
+```bash
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 pip install -e .
+```
 
 navigate the folder or drive path you want to share in your local network
 and type 
 boilerplate
-
+    
 scan the qrcode or proceed to the url project
 
 # 📦 Liana
