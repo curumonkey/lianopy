@@ -1,6 +1,38 @@
+# 🌿 Lianopy
+
+A jungle‑themed, stateless, cross‑platform Python file‑sharing server.  
+This project provides a **CLI + web interface** for sharing files across your local network with QR code onboarding, responsive UI, and secure storage handling.
+
+---
+
+## 📦 Features
+- 🌐 Share any folder or drive path over your LAN  
+- 📱 Scan a QR code for instant mobile access  
+- ⚡ FastAPI backend with Uvicorn server  
+- 🖥️ CLI for quick setup and control
+- 🪶 Lightweight, cross‑platform, and easy to extend  
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the Repository
+```bash
+git clone https://github.com/<your-username>/lianopy.git <project name>
+cd <project name>
+
+
+
 Once cloned
 
 rename the "boilerplate" folder and "boilerplate" in pyproject.toml to your preferred project name.
+
+In app.py and cli.py update "BOILERPLATE_STORAGE" to your preferred storage name, make sure they are matched.
+
+Set "boilerplate" to the name of your app
+```python
+uvicorn.run("lianopy.app:app", host="0.0.0.0", port=args.port, reload=False)  # EDIT: package path
+```
 
 cd to your project
 
@@ -19,9 +51,9 @@ boilerplate
     
 scan the qrcode or proceed to the url project
 
-# 📦 Liana
+# Lianopy
 
-**Liana** is a lightweight, **FastAPI‑powered** local file sharing server with a simple **CLI**.  
+**Lianopy** is a lightweight, **FastAPI‑powered** local file sharing server with a simple **CLI**.  
 It lets you share any folder on your machine over your local network with a clean **web UI** and bundled **static assets**.
 
 ---
