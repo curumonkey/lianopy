@@ -1,6 +1,6 @@
 # 🌿 Lianopy
 
-## 🙈🍌 “Ooo‑oooh, welcome to my jungle! 
+### 🙈🍌 “Ooo‑oooh, welcome to my jungle! 
 
 I’m just a curious monkey, and I’ve found this clever thing called Lianopy. You know how we monkeys swing from liana to liana high up in the canopy? Well, that’s the idea here!
 
