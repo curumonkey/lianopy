@@ -34,6 +34,8 @@ So when you run Lianopy, you’re not just starting a server — you’re openin
 
 ## 🚀 Getting Started
 
+### for non-termux
+
 Clone our Lianopy repository
 
 ```bash
@@ -69,4 +71,5 @@ On Linux/macOS, you might use:
 cd /home/yourname/Downloads
 ```
 
-Scan the qrcode or proceed to the url project
+
+scan the qrcode or proceed to the url project
