@@ -32,6 +32,9 @@ So when you run Lianopy, you’re not just starting a server — you’re openin
 
 ---
 
+## LIMITATIONS!!!
+If running in Termux, it will not let you access external SD Card.
+
 ## 🚀 Getting Started
 
 ### for non-termux
@@ -71,7 +74,6 @@ On Linux/macOS, you might use:
 cd /home/yourname/Downloads
 ```
 
-<<<<<<< HEAD
 Scan the qrcode or proceed to the url project
 =======
 
