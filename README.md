@@ -71,5 +71,41 @@ On Linux/macOS, you might use:
 cd /home/yourname/Downloads
 ```
 
+<<<<<<< HEAD
+Scan the qrcode or proceed to the url project
+=======
 
 scan the qrcode or proceed to the url project
+
+
+### for Termux
+
+In you Termux
+
+install proot-distro
+```bash
+pkg install proot-distro
+```
+
+install ubuntu
+```bash
+proot-distro install ubuntu
+```
+
+enable Termux Storage Access
+```bash
+termux-setup-storage
+```
+
+login to Ubuntu with a bind mount
+```bash
+proot-distro login ubuntu --bind /sdcard:/mnt/sdcard
+```
+
+install git inside ubuntu
+```bash
+apt install git
+```
+
+
+>>>>>>> 0e82ee1 (for termux)
