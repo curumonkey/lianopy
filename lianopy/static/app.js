@@ -219,7 +219,11 @@ if (state.group === "type") {
     if (item.is_dir) {
       card.onclick = () => { navigateTo(item.path); };
     } else {
-      card.onclick = () => window.open(`/api/open?path=${encodeURIComponent(item.path)}`, "_blank");
+      card.onclick = () => {
+      openViewer(item);   // show the modal viewer with this file
+    };
+
+
     }
     card.style.cursor = "pointer";
 
@@ -334,6 +338,99 @@ document.getElementById("filter").onchange = (e) => {
   render();
 };
 
+const overlay = document.getElementById("viewerOverlay");
+const closeBtn = document.getElementById("viewerClose");
+const bodyEl = overlay.querySelector(".viewer-body");
+const captionEl = document.getElementById("viewerCaption");
+
+function getMediaKind(item) {
+  if (item.mime?.startsWith("image/")) return "image";
+  if (item.mime?.startsWith("video/")) return "video";
+  const name = item.name.toLowerCase();
+  if (/\.(jpg|jpeg|png|gif|webp|bmp|svg)$/.test(name)) return "image";
+  if (/\.(mp4|webm|mov|mkv|avi)$/.test(name)) return "video";
+  return null;
+}
+
+function formatBytes(bytes) {
+  if (!bytes) return "Unknown";
+  const sizes = ["B", "KB", "MB", "GB"];
+  const i = Math.floor(Math.log(bytes) / Math.log(1024));
+  return (bytes / Math.pow(1024, i)).toFixed(1) + " " + sizes[i];
+}
+
+function openViewer(item) {
+  bodyEl.innerHTML = "";
+  captionEl.textContent = item.name;
+
+  const kind = getMediaKind(item);
+  const fileUrl = `/api/open?path=${encodeURIComponent(item.path)}`;
+
+  // Render preview
+  if (kind === "image") {
+    const img = document.createElement("img");
+    img.src = fileUrl;
+    img.alt = item.name;
+    bodyEl.appendChild(img);
+  } else if (kind === "video") {
+    const video = document.createElement("video");
+    video.src = fileUrl;
+    video.controls = true;
+    video.autoplay = true;
+    bodyEl.appendChild(video);
+  } else {
+    const div = document.createElement("div");
+    div.textContent = "Preview not available.";
+    bodyEl.appendChild(div);
+  }
+
+  // --- File size info ---
+  const infoDiv = document.createElement("div");
+  infoDiv.className = "viewer-info";
+
+  // Actual file size (from backend metadata)
+  const actualSize = formatBytes(item.size);
+
+  // Thumbnail size (if base64 string present)
+  let thumbSize = "N/A";
+  if (item.thumb && item.thumb.startsWith("data:")) {
+    // Calculate base64 length → approximate bytes
+    const base64Length = item.thumb.length - (item.thumb.indexOf(",") + 1);
+    thumbSize = formatBytes(Math.ceil(base64Length * 3 / 4));
+  }
+
+  infoDiv.textContent = `File size: ${actualSize}`;
+  bodyEl.appendChild(infoDiv);
+
+  // --- Download button ---
+  const dlBtn = document.createElement("a");
+  dlBtn.href = fileUrl;
+  dlBtn.download = item.name;
+  dlBtn.textContent = "⬇ Download";
+  dlBtn.className = "viewer-download";
+  bodyEl.appendChild(dlBtn);
+
+  overlay.classList.remove("hidden");
+  overlay.setAttribute("aria-hidden", "false");
+}
+
+
+function closeViewer() {
+  overlay.classList.add("hidden");
+  overlay.setAttribute("aria-hidden", "true");
+  const vid = bodyEl.querySelector("video");
+  if (vid) { vid.pause(); vid.src = ""; }
+  bodyEl.innerHTML = "";
+}
+
+closeBtn.addEventListener("click", closeViewer);
+overlay.addEventListener("click", (e) => {
+  const content = overlay.querySelector(".viewer-content");
+  if (!content.contains(e.target)) closeViewer();
+});
+window.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") closeViewer();
+});
 
 
 // Initialize from URL and set initial history state
