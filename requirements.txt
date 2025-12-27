@@ -1,17 +1,24 @@
 annotated-types==0.7.0
 anyio==4.11.0
+blessed==1.25.0
 -e git+https://github.com/mrsolomonkey/the-boilerplate.git@74dcab89181c2d3ca5388f7fc3f02dfd72fa784f#egg=boilerplate
 click==8.3.0
+editor==1.6.6
 fastapi==0.118.3
 h11==0.16.0
 httptools==0.7.1
 idna==3.10
+inquirer==3.4.1
+-e git+https://github.com/mrsolomonkey/lianopy.git@4d91f09679296aa54661fc72f58de07328e8e059#egg=lianopy
 pillow==11.3.0
-# pydantic==2.12.0
-# pydantic_core==2.41.1
+psutil==7.1.3
+pydantic==2.12.0
+pydantic_core==2.41.1
 python-dotenv==1.1.1
 PyYAML==6.0.3
 qrcode==8.2
+readchar==4.2.1
+runs==1.2.2
 sniffio==1.3.1
 starlette==0.48.0
 typing-inspection==0.4.2
@@ -19,4 +26,6 @@ typing_extensions==4.15.0
 uvicorn==0.37.0
 uvloop==0.21.0
 watchfiles==1.1.0
+wcwidth==0.2.14
 websockets==15.0.1
+xmod==1.8.1
